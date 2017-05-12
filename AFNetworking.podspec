@@ -73,7 +73,7 @@ EOS
     ss.tvos.deployment_target = '9.0'
     ss.dependency 'AFNetworking/NSURLSession'
 
-    ss.public_header_files = 'UIKit+AFNetworking/AF*.h'
-    ss.source_files = 'UIKit+AFNetworking/AF*.{h,m}'
+    ss.public_header_files = 'UIKit+AFNetworking/{AF,UI}*.h'
+    ss.source_files = 'UIKit+AFNetworking/{AF,UI}*.{h,m}'
   end
 end
