@@ -6,12 +6,12 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/AFNetworking/AFNetworking'
   s.social_media_url = 'https://twitter.com/AFNetworking'
   s.authors  = { 'Mattt Thompson' => 'm@mattt.me' }
-  s.source   = { :git => 'https://github.com/AFNetworking/AFNetworking.git', :tag => s.version, :submodules => true }
+  s.source   = { :git => 'https://github.com/sopracreau/AFNetworking.git', :tag => s.version, :submodules => true }
   s.requires_arc = true
-  
+
   s.public_header_files = 'AFNetworking/AFNetworking.h'
   s.source_files = 'AFNetworking/AFNetworking.h'
-  
+
   pch_AF = <<-EOS
 #ifndef TARGET_OS_IOS
   #define TARGET_OS_IOS TARGET_OS_IPHONE
@@ -26,12 +26,12 @@ Pod::Spec.new do |s|
 #endif
 EOS
   s.prefix_header_contents = pch_AF
-  
+
   s.ios.deployment_target = '7.0'
   s.osx.deployment_target = '10.9'
   s.watchos.deployment_target = '2.0'
   s.tvos.deployment_target = '9.0'
-  
+
   s.subspec 'Serialization' do |ss|
     ss.source_files = 'AFNetworking/AFURL{Request,Response}Serialization.{h,m}'
     ss.public_header_files = 'AFNetworking/AFURL{Request,Response}Serialization.h'
@@ -74,6 +74,6 @@ EOS
     ss.dependency 'AFNetworking/NSURLSession'
 
     ss.public_header_files = 'UIKit+AFNetworking/*.h'
-    ss.source_files = 'UIKit+AFNetworking'
+    ss.source_files = 'UIKit+AFNetworking/*.{h,m}'
   end
 end
